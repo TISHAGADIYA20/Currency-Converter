@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4e4ba 0%, #e8d5a3 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    min-height: 45vh;
+    width: 500px; /* Increased from 450px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+form input {
+    border: 2px solid #e0e0e0;
+    font-size: 1.1rem;
+    height: 3.5rem;
+    padding: 0 1rem;
+    background-color: #fafafa;
+}
+
+form input:focus {
+    border-color: #af4d98;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(175, 77, 152, 0.1);
+}
+
+.amount p {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.dropdown i {
+    font-size: 1.8rem;
+    color: #af4d98;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: #f8f4f6;
+    border: 2px solid #e8d5e0;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown i:hover {
+    background-color: #af4d98;
+    color: white;
+    transform: rotate(180deg) scale(1.1);
+    border-color: #af4d98;
+}
+
+.from, .to {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.from p, .to p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    gap: 1rem;
+}
+
+.flag-container {
+    width: 80px;
+    height: 60px;
+    border-radius: 0.75rem;
+    border: 2px solid #e0e0e0;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.flag-container:hover {
+    border-color: #af4d98;
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+.flag-container img {
+    width: 3rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.dropdown-container {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 2px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-container:hover {
+    border-color: #af4d98;
+    background-color: #fff;
+}
+
+.dropdown-container select {
+    font-size: 1rem;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.msg {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #af4d98;
+    background-color: #f8f4f6;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e8d5e0;
+}
+
+form button {
+    height: 3.5rem;
+    background: linear-gradient(135deg, #af4d98 0%, #8e3a7a 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #8e3a7a 0%, #af4d98 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(175, 77, 152, 0.3);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 2rem;
+    }
+    
+    .dropdown {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .dropdown i {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+    
+    .dropdown i:hover {
+        transform: rotate(270deg);
+    }
+    
+    .from, .to {
+        width: 100%;
+    }
+}
